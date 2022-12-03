@@ -38,9 +38,9 @@ function Projects({ projects }: Props) {
 
           // eslint-disable-next-line react/jsx-key
           <div className='w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center
-                           p-20 md:p-40 h-screen'>
+                           p-20 md:p-40 h-screen' key={project._id}>
             
-            <motion.img className='xl:h-[350px] w-auto md:h-[200px] md-w-auto' key={i}
+            <motion.img className='xl:h-[350px] w-auto md:h-[200px] md-w-auto' 
               initial={{ y: -300, opacity: 0 }}
               whileInView={{ opacity: 1,  y: 0 }}
               viewport={{ once: true }}
@@ -66,7 +66,7 @@ function Projects({ projects }: Props) {
               
 
               <p className='text-lg text-center md:text-left'>
-                {project.summary}
+                {project?.summary}
               </p>
             </div>
 

@@ -10,6 +10,7 @@ type Props = {
 
 function Header({ socials }: Props) {
   return (
+    
       <header className='sticky p-5 top-0 flex items-start 
                         justify-between max-w-7xl mx-auto z-20 xl:items-center'>
           

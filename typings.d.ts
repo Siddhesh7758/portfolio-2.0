@@ -2,7 +2,7 @@ interface SanityBody {
     _createdAt: string;
     _id: string;
     _rev: string;
-    _updatedAt;
+    _updatedAt: string;
 }
 
 interface Image {
