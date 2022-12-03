@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import About from '../components/About'
@@ -27,7 +26,7 @@ export default function Home( {pageInfo, projects, skills, socials} : Props ) {
                     overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20
                     scrollbar-thumb-[#F7AB0A]/50'>
       <Head>
-        <title>SID's Portfolio</title>
+        <title>Portfolio 2.0</title>
       </Head>
 
       <Header socials={socials} />
@@ -37,7 +36,7 @@ export default function Home( {pageInfo, projects, skills, socials} : Props ) {
       </section>
 
 
-      <section id='about' className='snap-center'>
+      <section id='about' className='snap-start'>
         <About pageInfo={ pageInfo } />
       </section>
 

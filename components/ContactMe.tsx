@@ -17,10 +17,7 @@ function ContactMe({ }: Props) {
 
     
     
-    const {
-        register,
-        handleSubmit,
-    } = useForm<Inputs>();
+    const { register, handleSubmit } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
         window.location.href = `mailto:munfansiddhesh7758@gmail?subject=${formData.subject}&body=
@@ -62,25 +59,29 @@ function ContactMe({ }: Props) {
                 
             </div>
               
-              <form
-                  onSubmit={ handleSubmit(onSubmit) }
-                  className='flex flex-col justify-between space-y-2 w-fit mx-auto'>
-                  <div className='flex space-x-2'>
-                      
-                      <input {...register('name')}  className='contactInput' type="text" placeholder='Name' />
-                      <input {...register('email')} className='contactInput' type="text" placeholder='Email'/>
-                      
-                  </div>   
+              <div>
+                  <form
+                    onSubmit={ handleSubmit(onSubmit) }
+                    className='flex flex-col justify-between space-y-2 w-fit mx-auto'>
+                    <div className='flex space-x-2'>
+                        
+                        <input {...register('name')}  className='contactInput' type="text" placeholder='Name' />
+                        <input {...register('email')} className='contactInput' type="text" placeholder='Email'/>
+                        
+                    </div>   
+                    <div className='flex flex-col space-y-2'>
+                        <input {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
 
-                  <input {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
-
-                  <textarea {...register('message')} placeholder='Message' className='contactInput' />
-                  
-                  <button type='submit' className='bg-[#F7AB0A] p-4 rounded-md text-black font-bold text-lg'>
-                      Submit
-                  </button>
-            </form>
-
+                    <textarea {...register('message')} placeholder='Message' className='contactInput' />
+                    
+                    <button type='submit' className='bg-[#F7AB0A] p-4 rounded-md text-black font-bold text-lg'>
+                        Submit
+                    </button>  
+                    </div>
+                    
+                </form>
+              </div>
+              
         </div>
     </div>
   )
