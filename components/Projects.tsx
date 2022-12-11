@@ -3,7 +3,6 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { Project } from '../typings';
 import { urlFor } from '../sanity';
-import Image from 'next/image';
 
 type Props = {
   projects: Project[]
@@ -38,8 +37,8 @@ function Projects({ projects }: Props) {
         {projects?.map((project, i) => (
 
           // eslint-disable-next-line react/jsx-key
-          <div className='w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center
-                           p-20 md:p-40 h-screen' key={project._id}>
+          <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center
+                           p-20 md:p-40 h-screen'>
             
             <motion.img className='xl:h-[350px] w-auto md:h-[200px] md-w-auto' 
               initial={{ y: -300, opacity: 0 }}

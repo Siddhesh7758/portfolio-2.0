@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps } from 'next'
 import Head from 'next/head'
 import About from '../components/About'
 import ContactMe from '../components/ContactMe'
@@ -26,7 +26,7 @@ export default function Home( {pageInfo, projects, skills, socials} : Props ) {
                     overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20
                     scrollbar-thumb-[#F7AB0A]/50'>
       <Head>
-        <title>Portfolio 2.0</title>
+        <title>{ pageInfo?.name } - Portfolio</title>
       </Head>
 
       
@@ -60,7 +60,7 @@ export default function Home( {pageInfo, projects, skills, socials} : Props ) {
   )
 }
 
-export const getStaticProps : GetStaticProps<Props> = async () => {
+export const getServerSideProps : GetServerSideProps<Props> = async () => {
 
   const pageInfo: PageInfo = await fetchPageInfo();
   const socials: Social[] = await fetchSocials();
