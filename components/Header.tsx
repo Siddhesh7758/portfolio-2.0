@@ -43,7 +43,7 @@ function Header({ socials }: Props) {
         </motion.div>
 
       {/* gmail icon */}
-      <Link href='#contact'>
+      <a href='#contact'>
         <motion.div
             initial={{
                 x: 500,
@@ -71,7 +71,7 @@ function Header({ socials }: Props) {
             Get in touch
           </p>
         </motion.div>
-      </Link>
+      </a>
         
     </header>
   )
