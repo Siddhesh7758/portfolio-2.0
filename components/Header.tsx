@@ -36,7 +36,7 @@ function Header({ socials }: Props) {
           <SocialIcon
             key={social._id}
             url={social.url}
-                fgColor='gray'
+            fgColor='gray' 
             bgColor='transparent'/>
           ))}
               
@@ -67,7 +67,9 @@ function Header({ socials }: Props) {
                 fgColor='gray'
                 bgColor='transparent'
             />
-            <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get in touch</p>
+          <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>
+            Get in touch
+          </p>
         </motion.div>
       </Link>
         

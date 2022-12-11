@@ -10,11 +10,6 @@ export default {
       description: "Title of the project"
     },
     {
-      name: "role",
-      title: "Role",
-      type: "string"
-    },
-    {
       name: "image",
       title: "Image",
       type: "image",
@@ -32,12 +27,7 @@ export default {
       title: "Technologies",
       type: "array",
       of: [{ type: "reference", to: { type: "skill" } }],
-    },
-    {
-      name: "linkToBuild",
-      title: "LinkToBuild",
-      type: "url",
-    },
+    }
   ]
 
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { Project } from '../typings';
 import { urlFor } from '../sanity';
+import Image from 'next/image';
 
 type Props = {
   projects: Project[]
@@ -34,7 +35,7 @@ function Projects({ projects }: Props) {
                     scrollbar-thin scrollbar-thumb-[#F7AB0A]/50 '>
         
         {/* mapping the projects */}
-        {projects.map((project, i) => (
+        {projects?.map((project, i) => (
 
           // eslint-disable-next-line react/jsx-key
           <div className='w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center
@@ -59,15 +60,18 @@ function Projects({ projects }: Props) {
                 { project?.technologies.map((technology) => (
                   <img className='h-8 w-8 m-1'
                     key={technology._id}
-                    src={urlFor(technology?.image).url()}
-                    alt="" />
+                    src={urlFor(technology.image).url()}
+                    alt=""
+                    width={300}
+                    height={300} />
                 ))}
-              </div>
-              
 
+              
+              </div>
               <p className='text-lg text-center md:text-left'>
                 {project?.summary}
               </p>
+              
             </div>
 
           </div>
@@ -75,8 +79,7 @@ function Projects({ projects }: Props) {
 
         </div>
         
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[300px] 
-                      -skew-y-12">
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[300px] skew-y-12">
       </div>
     </motion.div>
   )

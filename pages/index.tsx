@@ -29,9 +29,10 @@ export default function Home( {pageInfo, projects, skills, socials} : Props ) {
         <title>Portfolio 2.0</title>
       </Head>
 
+      
       <Header socials={socials} />
       
-      <section id="hero" className='snap-start'>
+      <section id='hero' className='snap-start'>
         <Hero pageInfo={ pageInfo } />
       </section>
 
@@ -41,20 +42,18 @@ export default function Home( {pageInfo, projects, skills, socials} : Props ) {
       </section>
 
 
-      {/* skills */}
       <section id='skills' className='snap-start'>
         <Skills skills={ skills } />
       </section>
       
-      {/* projects */}
+
       <section id='projects' className='snap-start'>
         <Projects projects={ projects } />
       </section>
 
 
-      {/* contact me */}
       <section id='contact' className='snap-start'>
-        <ContactMe/>
+        <ContactMe />
       </section>
 
     </div>

@@ -47,7 +47,7 @@ function About({ pageInfo }: Props) {
                   duration: 1
               }}
              src={ urlFor(pageInfo?.profilePic).url() }
-              className='-mb-24 mt-4 md:mb-0 flex-shrink-0 w-44 h-44 rounded-full object-cover
+              className='mb-24 mt-4 md:mb-0 flex-shrink-0 w-44 h-44 rounded-full object-cover
                             md:rounded-lg md:w-64 md:h-95 xl:w-[380px] xl:h-[380px]'
         />
         

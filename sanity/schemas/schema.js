@@ -13,5 +13,5 @@ import project from './project'
 export default createSchema({
   // We name our schema
   name: 'default',
-  types: schemaTypes.concat([ pageInfo, social, skill, project, ]),
+  types: schemaTypes.concat([ pageInfo, social, skill, project ]),
 })
